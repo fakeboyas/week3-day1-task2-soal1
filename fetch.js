@@ -10,9 +10,8 @@ async function getCountry() {
     try {
         let response = await fetch(endpoint, options);
         let results = await response.json();
-
+        console.log(results.length);
         results.forEach((result) => {
-            console.log(result.length);
             console.log(result.name);
         });
     } catch (error) {
